@@ -12,6 +12,7 @@ gem 'devise'
 gem 'doorkeeper'
 gem 'jsonapi-resources'
 gem 'pundit'
+gem 'rack-cors'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
