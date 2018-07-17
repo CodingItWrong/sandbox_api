@@ -1,2 +1,2 @@
-class PostsController < JSONAPI::ResourceController
+class PostsController < ApiController
 end
