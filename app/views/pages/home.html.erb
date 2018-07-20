@@ -1,0 +1,63 @@
+<p>
+This is a sample API for experimenting with the JSON API format. It allows you to create an account so you can modify your own data.
+</p>
+
+<p>
+<%= link_to 'Sign up', new_user_registration_path %> for a free account. Then you can use the same username and password to log in to the API.
+</p>
+
+<h2>Logging In</h2>
+
+<p>
+You authenticate to the API with the OAuth 2 password grant.
+</p>
+
+<pre>
+POST /oauth/token
+
+grant_type=password
+username=you@yourodmain.com
+password=yourpassword
+</pre>
+
+<p>
+You'll receive back the token to use:
+</p>
+
+<pre>
+{
+    "access_token": "b027b3ed38739a1d01c2ac05008f0cb4e7a764acc802e0cfb1e5bf1a4876597c",
+    "token_type": "bearer",
+    "expires_in": 7200,
+    "created_at": 1531855327
+}
+</pre>
+
+<h2>Accessing Data</h2>
+
+All your requests should include the following headers:
+
+<pre>
+Content-Type=application/vnd.api+json
+Authorization=Bearer YOUR_TOKEN
+</pre>
+
+<h3>Posts</h3>
+
+<ul>
+  <li>GET /posts</li>
+  <li>GET /posts/27</li>
+  <li>POST /posts</li>
+  <li>PATCH /posts/27</li>
+  <li>DELETE /posts/27</li>
+</ul>
+
+<h2>Learning More</h2>
+
+<ul>
+  <li><a href="https://jsonapi.org">JSON API</a></li>
+</ul>
+
+<h2>Implementation</h2>
+
+This API is implemented with Ruby on Rails and the `jsonapi_resources` gem. It's one of the easiest ways to create an API!
