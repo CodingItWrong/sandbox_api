@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class PostResource < JSONAPI::Resource
   attributes :title, :body
 
