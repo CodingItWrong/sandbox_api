@@ -11,7 +11,6 @@ gem 'uglifier', '>= 1.3.0'
 gem 'devise'
 gem 'doorkeeper'
 gem 'jsonapi-resources'
-gem 'pundit'
 gem 'rack-cors'
 
 group :development do
