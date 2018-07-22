@@ -13,6 +13,8 @@ gem 'doorkeeper'
 gem 'jsonapi-resources'
 gem 'rack-cors'
 gem 'dotenv-rails'
+gem 'bootstrap', '~> 4.1.1'
+gem 'jquery-rails'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
