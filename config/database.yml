@@ -80,6 +80,7 @@ test:
 #
 production:
   <<: *default
+  host: <%= ENV['DATABASE_HOST'] %>
   database: sandbox_api_production
-  username: sandbox_api
-  password: <%= ENV['SANDBOX_API_DATABASE_PASSWORD'] %>
+  username: postgres
+  password:
