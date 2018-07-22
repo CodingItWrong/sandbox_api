@@ -12,12 +12,12 @@ gem 'devise'
 gem 'doorkeeper'
 gem 'jsonapi-resources'
 gem 'rack-cors'
+gem 'dotenv-rails'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'bullet'
-  gem 'dotenv-rails'
   gem 'faker'
 end
 
