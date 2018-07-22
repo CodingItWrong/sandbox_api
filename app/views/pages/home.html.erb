@@ -12,35 +12,33 @@ This is a sample API for experimenting with the JSON API format. It allows you t
 You authenticate to the API with the OAuth 2 password grant.
 </p>
 
-<pre>
+<pre><code>
 POST /oauth/token
 
 grant_type=password
 username=you@yourodmain.com
 password=yourpassword
-</pre>
+</code></pre>
 
 <p>
 You'll receive back the token to use:
 </p>
 
-<pre>
-{
+<pre><code class="language-javascript">{
     "access_token": "b027b3ed38739a1d01c2ac05008f0cb4e7a764acc802e0cfb1e5bf1a4876597c",
     "token_type": "bearer",
     "expires_in": 7200,
     "created_at": 1531855327
-}
-</pre>
+}</code></pre>
 
 <h2>Accessing Data</h2>
 
 All your requests should include the following headers:
 
-<pre>
+<pre><code>
 Content-Type=application/vnd.api+json
 Authorization=Bearer YOUR_TOKEN
-</pre>
+</code></pre>
 
 <h3>Posts</h3>
 
