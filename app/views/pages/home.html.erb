@@ -36,15 +36,129 @@ All your requests should include the following headers:
 <pre><code class="language-http">Content-Type=application/vnd.api+json
 Authorization=Bearer YOUR_TOKEN</code></pre>
 
-<h3>Posts</h3>
+<h3>List Posts</h3>
 
-<ul>
-  <li>GET /posts</li>
-  <li>GET /posts/27</li>
-  <li>POST /posts</li>
-  <li>PATCH /posts/27</li>
-  <li>DELETE /posts/27</li>
-</ul>
+<pre><code class="language-http">GET /posts</code></pre>
+
+Response:
+
+<pre><code class="language-http">200 OK</code></pre>
+
+<pre><code class="language-javascript">{
+    "data": [
+        {
+            "id": "1",
+            "type": "posts",
+            "links": {
+                "self": "https://sandboxapi.codingitwrong.com/posts/1"
+            },
+            "attributes": {
+                "title": "Test Post",
+                "body": "This is a test!"
+            }
+        }
+    ]
+}</code></pre>
+
+<h3>Show a Post</h3>
+
+<pre><code class="language-http">GET /posts/1</code></pre>
+
+Response:
+
+<pre><code class="language-http">200 OK</code></pre>
+
+<pre><code class="language-javascript">{
+    "data": {
+        "id": "1",
+        "type": "posts",
+        "links": {
+            "self": "https://sandboxapi.codingitwrong.com/posts/1"
+        },
+        "attributes": {
+            "title": "Test Post",
+            "body": "This is a test!"
+        }
+    }
+}</code></pre>
+
+<h3>Creating a Post</h3>
+
+Request
+
+<pre><code class="language-http">POST /posts</code></pre>
+
+<pre><code class="language-javascript">{
+    "data": {
+        "type": "posts",
+        "attributes": {
+            "title": "Posted Post",
+            "body": "This post is posted!"
+        }
+    }
+}</code></pre>
+
+Response
+
+<pre><code class="language-http">201 Created</code></pre>
+
+<pre><code class="language-javascript">{
+    "data": {
+        "id": "2",
+        "type": "posts",
+        "links": {
+            "self": "https://sandboxapi.codingitwrong.com/posts/2"
+        },
+        "attributes": {
+            "title": "Posted Post",
+            "body": "This post is posted!"
+        }
+    }
+}</code></pre>
+
+<h3>Updating a Post</h3>
+
+Request
+
+<pre><code class="language-http">PATCH /posts/1</code></pre>
+
+<pre><code class="language-javascript">{
+    "data": {
+        "id": "1",
+        "type": "posts",
+        "attributes": {
+            "title": "Updated Post"
+        }
+    }
+}</code></pre>
+
+Response
+
+<pre><code class="language-http">200 OK</code></pre>
+
+<pre><code class="language-javascript">{
+    "data": {
+        "id": "1",
+        "type": "posts",
+        "links": {
+            "self": "https://sandboxapi.codingitwrong.com/posts/1"
+        },
+        "attributes": {
+            "title": "Updated Post",
+            "body": "This is a test!"
+        }
+    }
+}</code></pre>
+
+<h3>Deleting a Post</h3>
+
+Request
+
+<pre><code class="language-http">DELETE /posts/1</code></pre>
+
+Response
+
+<pre><code class="language-http">204 No Content</code></pre>
 
 <h2>Learning More</h2>
 
