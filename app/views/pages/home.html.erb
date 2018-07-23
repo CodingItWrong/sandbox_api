@@ -38,7 +38,7 @@ password=yourpassword</code></pre>
 You'll receive back the token to use:
 </p>
 
-<pre><code class="language-javascript">{
+<pre><code class="language-json">{
     "access_token": "b027b3ed38739a1d01c2ac05008f0cb4e7a764acc802e0cfb1e5bf1a4876597c",
     "token_type": "bearer",
     "expires_in": 7200,
@@ -60,7 +60,7 @@ Response:
 
 <pre><code class="language-http">200 OK</code></pre>
 
-<pre><code class="language-javascript">{
+<pre><code class="language-json">{
     "data": [
         {
             "id": "1",
@@ -84,7 +84,7 @@ Response:
 
 <pre><code class="language-http">200 OK</code></pre>
 
-<pre><code class="language-javascript">{
+<pre><code class="language-json">{
     "data": {
         "id": "1",
         "type": "posts",
@@ -104,7 +104,7 @@ Request
 
 <pre><code class="language-http">POST /posts</code></pre>
 
-<pre><code class="language-javascript">{
+<pre><code class="language-json">{
     "data": {
         "type": "posts",
         "attributes": {
@@ -118,7 +118,7 @@ Response
 
 <pre><code class="language-http">201 Created</code></pre>
 
-<pre><code class="language-javascript">{
+<pre><code class="language-json">{
     "data": {
         "id": "2",
         "type": "posts",
@@ -138,7 +138,7 @@ Request
 
 <pre><code class="language-http">PATCH /posts/1</code></pre>
 
-<pre><code class="language-javascript">{
+<pre><code class="language-json">{
     "data": {
         "id": "1",
         "type": "posts",
@@ -152,7 +152,7 @@ Response
 
 <pre><code class="language-http">200 OK</code></pre>
 
-<pre><code class="language-javascript">{
+<pre><code class="language-json">{
     "data": {
         "id": "1",
         "type": "posts",
