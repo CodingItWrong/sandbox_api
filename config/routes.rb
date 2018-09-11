@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   use_doorkeeper
 
   jsonapi_resources :posts
+  jsonapi_resources :restaurants
 end
