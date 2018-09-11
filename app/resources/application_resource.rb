@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class ApplicationResource < JSONAPI::Resource
+  abstract
+
   def self.creatable_fields(context)
     super - [:user]
   end
