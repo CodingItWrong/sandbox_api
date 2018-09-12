@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
-class PostResource < ApplicationResource
-  attributes :title, :body
+class RestaurantResource < ApplicationResource
+  attribute :name
+  has_many :dishes
 
   before_create do
     _model.user = current_user
@@ -9,6 +10,6 @@ class PostResource < ApplicationResource
 
   def self.records(options = {})
     user = current_user(options)
-    user.posts
+    user.restaurants
   end
 end
