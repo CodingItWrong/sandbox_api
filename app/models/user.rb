@@ -8,4 +8,5 @@ class User < ApplicationRecord
 
   has_many :posts
   has_many :restaurants
+  has_many :dishes, through: :restaurants
 end

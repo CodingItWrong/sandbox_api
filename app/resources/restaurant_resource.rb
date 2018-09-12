@@ -2,6 +2,7 @@
 
 class RestaurantResource < ApplicationResource
   attribute :name
+  has_many :dishes
 
   before_create do
     _model.user = current_user
