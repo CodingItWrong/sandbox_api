@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
+  root 'pages#home'
   devise_for :users
+
   use_doorkeeper
 
   jsonapi_resources :dishes
