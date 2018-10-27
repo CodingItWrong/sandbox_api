@@ -10,9 +10,21 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   # POST /resource
-  # def create
-  #   super
-  # end
+  def create
+    super
+    create_sample_posts
+  end
+
+  def create_sample_posts
+    user = User.find_by(email: params['user']['email'])
+    (1..3).each do |n|
+      Post.create!(
+        user: user,
+        title: "Sample Post #{n}",
+        body: "This is sample post #{n}",
+      )
+    end
+  end
 
   # GET /resource/edit
   # def edit
