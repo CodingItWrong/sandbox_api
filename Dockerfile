@@ -1,5 +1,6 @@
 FROM ruby:2.5.1
 
+RUN wget -qO- https://deb.nodesource.com/setup_8.x | bash -
 RUN apt-get update && \
     apt-get install -y nodejs
 RUN gem install nokogiri -v 1.8.4
