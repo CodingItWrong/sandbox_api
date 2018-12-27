@@ -1,24 +1,35 @@
-# README
+# Sandbox API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A sample API for experimenting with the JSON:API format. It allows users to create accounts so they can modify their own data.
 
-Things you may want to cover:
+## Getting Started
 
-* Ruby version
+### Requirements
 
-* System dependencies
+1. Ruby
+1. PostgreSQL (e.g. [Postgres.app][postgres-app])
 
-* Configuration
+### Setup
 
-* Database creation
+```sh
+$ bundle install
+$ rails db:setup
+```
 
-* Database initialization
+### Testing
 
-* How to run the test suite
+```sh
+$ bin/rspec
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+### Running
 
-* Deployment instructions
+```sh
+$ rails server
+```
 
-* ...
+[postgres-app]: http://postgresapp.com
+
+### License
+
+Apache-2.0
