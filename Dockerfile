@@ -1,9 +1,10 @@
-FROM ruby:2.5.1
+FROM ruby:2.5.3
 
 RUN wget -qO- https://deb.nodesource.com/setup_8.x | bash -
 RUN apt-get update && \
     apt-get install -y nodejs
-RUN gem install nokogiri -v 1.8.5
+RUN gem install bundler
+RUN gem install nokogiri -v 1.9.1
 
 RUN mkdir /myapp
 WORKDIR /myapp
