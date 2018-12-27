@@ -13,11 +13,15 @@ class ApplicationResource < JSONAPI::Resource
 
   private
 
-  def self.current_user(options)
-    options.fetch(:context).fetch(:current_user)
-  end
-
   def current_user
     context.fetch(:current_user)
+  end
+
+  class << self
+    private
+
+    def current_user(options)
+      options.fetch(:context).fetch(:current_user)
+    end
   end
 end
