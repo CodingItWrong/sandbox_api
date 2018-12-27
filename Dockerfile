@@ -1,6 +1,6 @@
 FROM ruby:2.5.3
 
-RUN wget -qO- https://deb.nodesource.com/setup_8.x | bash -
+RUN wget -qO- https://deb.nodesource.com/setup_10.x | bash -
 RUN apt-get update && \
     apt-get install -y nodejs
 RUN gem install bundler
