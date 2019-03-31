@@ -9,5 +9,5 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 3.times do |n|
-  Widget.create!(name: "Widget #{n+1}")
+  Widget.create!(name: "Widget #{n + 1}")
 end
