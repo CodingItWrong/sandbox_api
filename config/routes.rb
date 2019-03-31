@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   jsonapi_resources :dishes
   jsonapi_resources :posts
   jsonapi_resources :restaurants
+  jsonapi_resources :widgets
 end
