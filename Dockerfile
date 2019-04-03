@@ -1,4 +1,4 @@
-FROM ruby:2.6.1
+FROM ruby:2.6.2
 
 RUN wget -qO- https://deb.nodesource.com/setup_10.x | bash -
 RUN apt-get update && \
