@@ -3,5 +3,7 @@
 class WidgetResource < JSONAPI::Resource
   immutable
 
-  attributes :name
+  has_many :widget_comments
+
+  attributes :name, :description
 end
