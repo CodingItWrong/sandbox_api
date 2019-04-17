@@ -8,22 +8,21 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-widget = Widget.create!(name: "Widget 1", description: "This is one widget.")
-Widget.create!(name: "Widget 2", description: "Here is another widget.")
-Widget.create!(name: "Widget 3", description: "My third widget.")
+widget = Widget.create!(name: 'Widget 1', description: 'This is one widget.')
+Widget.create!(name: 'Widget 2', description: 'Here is another widget.')
+Widget.create!(name: 'Widget 3', description: 'My third widget.')
 
 widget.widget_comments.create!(
   username: 'First User',
-  comment: 'This is great.'
+  comment: 'This is great.',
 )
 
 widget.widget_comments.create!(
   username: 'Second User',
-  comment: 'It is not so great.'
+  comment: 'It is not so great.',
 )
-
 
 widget.widget_comments.create!(
   username: 'Third User',
-  comment: "Yup it's great."
+  comment: "Yup it's great.",
 )
