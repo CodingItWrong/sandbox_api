@@ -5,7 +5,7 @@ class DishResource < ApplicationResource
   has_one :restaurant
 
   def fetchable_fields
-    super - [:restaurant]
+    super - %i[restaurant]
   end
 
   def self.records(options = {})

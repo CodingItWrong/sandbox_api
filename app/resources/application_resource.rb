@@ -4,11 +4,11 @@ class ApplicationResource < JSONAPI::Resource
   abstract
 
   def self.creatable_fields(context)
-    super - [:user]
+    super - %i[user]
   end
 
   def self.updatable_fields(context)
-    super - [:user]
+    super - %i[user]
   end
 
   private

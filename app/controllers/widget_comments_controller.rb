@@ -1,4 +1,3 @@
 # frozen_string_literal: true
 
-class WidgetCommentsController < ApiController
-end
+class WidgetCommentsController < ApiController; end
