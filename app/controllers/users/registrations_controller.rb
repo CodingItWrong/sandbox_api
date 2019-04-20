@@ -19,7 +19,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
     user = User.find_by(email: params['user']['email'])
     (1..3).each do |n|
       Post.create!(
-        user: user, title: "Sample Post #{n}", body: "This is sample post #{n}"
+        user: user, title: "Sample Post #{n}", body: "This is sample post #{n}",
       )
     end
   end
