@@ -4,9 +4,7 @@ class RestaurantResource < ApplicationResource
   attribute :name
   has_many :dishes
 
-  before_create do
-    _model.user = current_user
-  end
+  before_create { _model.user = current_user }
 
   def self.records(options = {})
     user = current_user(options)

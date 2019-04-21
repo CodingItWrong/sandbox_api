@@ -7,7 +7,9 @@ RSpec.describe 'list posts', type: :request do
   let!(:post) { FactoryBot.create(:post, user: user) }
   let!(:other_post) { FactoryBot.create(:post) }
 
-  let(:token) { FactoryBot.create(:access_token, resource_owner_id: user.id).token }
+  let(:token) do
+    FactoryBot.create(:access_token, resource_owner_id: user.id).token
+  end
 
   context 'when not authenticated' do
     it 'returns unauthorized' do
@@ -19,9 +21,7 @@ RSpec.describe 'list posts', type: :request do
 
   context 'when authenticated' do
     it "returns user's posts" do
-      headers = {
-        'Authorization' => "Bearer #{token}",
-      }
+      headers = { 'Authorization' => "Bearer #{token}" }
 
       get '/posts', headers: headers
 
