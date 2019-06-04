@@ -12,16 +12,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # POST /resource
   def create
     super
-    create_sample_posts
-  end
-
-  def create_sample_posts
-    user = User.find_by(email: params['user']['email'])
-    (1..3).each do |n|
-      Post.create!(
-        user: user, title: "Sample Post #{n}", body: "This is sample post #{n}",
-      )
-    end
+    create_sample_resources
   end
 
   # GET /resource/edit
@@ -69,4 +60,55 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # def after_inactive_sign_up_path_for(resource)
   #   super(resource)
   # end
+
+  private
+
+  def created_user
+    User.find_by(email: params['user']['email'])
+  end
+
+  def create_sample_resources
+    create_sample_posts
+    create_sample_restaurants
+    create_sample_games
+  end
+
+  def create_sample_posts
+    (1..3).each do |n|
+      Post.create!(
+        user: created_user,
+        title: "Sample Post #{n}",
+        body: "This is sample post #{n}",
+      )
+    end
+  end
+
+  def create_sample_restaurants
+    sushi_place =
+      created_user.restaurants.create!(
+        name: 'Sushi Place', address: '123 Main Street',
+      )
+    burger_place =
+      created_user.restaurants.create!(
+        name: 'Burger Place', address: '456 Other Street',
+      )
+
+    sushi_place.dishes.create!(name: 'Volcano Roll', rating: 3)
+    sushi_place.dishes.create!(name: 'Salmon Nigiri', rating: 4)
+
+    burger_place.dishes.create!(name: 'Barbecue Burger', rating: 5)
+    burger_place.dishes.create!(name: 'Slider', rating: 3)
+  end
+
+  def create_sample_games
+    ps = created_user.systems.create!(name: 'PlayStation')
+    wii = created_user.systems.create!(name: 'Wii')
+    xb_360 = created_user.systems.create!(name: 'Xbox 360')
+
+    ps.games.create!(title: 'Castlevania: Symphony of the Night', year: 1_997)
+    ps.games.create!(title: 'Final Fantasy 7', year: 1_997)
+    wii.games.create!(title: 'Okami', year: 2_006)
+    xb_360.games.create!(title: 'Fallout 3', year: 2_008)
+    xb_360.games.create!(title: 'Portal', year: 2_007)
+  end
 end
