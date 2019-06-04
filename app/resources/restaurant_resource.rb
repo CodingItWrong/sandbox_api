@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class RestaurantResource < ApplicationResource
-  attribute :name
+  attributes :name, :address
   has_many :dishes
 
   before_create { _model.user = current_user }

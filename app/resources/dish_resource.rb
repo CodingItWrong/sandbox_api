@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class DishResource < ApplicationResource
-  attributes :name, :restaurant
+  attributes :name, :rating, :restaurant
   has_one :restaurant
 
   def fetchable_fields
