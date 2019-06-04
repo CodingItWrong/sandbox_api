@@ -1,4 +1,4 @@
-class GameResource < JSONAPI::Resource
+class GameResource < ApplicationResource
   attributes :title, :year
   has_one :system
 
