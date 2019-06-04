@@ -103,12 +103,12 @@ class Users::RegistrationsController < Devise::RegistrationsController
   def create_sample_games
     ps = created_user.systems.create!(name: 'PlayStation')
     wii = created_user.systems.create!(name: 'Wii')
-    xb_360 = created_user.systems.create!(name: 'Xbox 360')
+    xb360 = created_user.systems.create!(name: 'Xbox 360')
 
     ps.games.create!(title: 'Castlevania: Symphony of the Night', year: 1_997)
     ps.games.create!(title: 'Final Fantasy 7', year: 1_997)
     wii.games.create!(title: 'Okami', year: 2_006)
-    xb_360.games.create!(title: 'Fallout 3', year: 2_008)
-    xb_360.games.create!(title: 'Portal', year: 2_007)
+    xb360.games.create!(title: 'Fallout 3', year: 2_008)
+    xb360.games.create!(title: 'Portal', year: 2_007)
   end
 end

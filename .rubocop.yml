@@ -4,16 +4,16 @@ AllCops:
 
   # Don't check binstubs or gemfile
   Exclude:
-    - 'bin/**/*'
-    - 'config/**/*'
-    - 'config.ru'
-    - 'db/migrate/*'
-    - 'db/schema.rb'
-    - 'node_modules/**/*'
-    - 'Gemfile'
-    - 'Rakefile'
-    - 'spec/*_helper.rb'
-    - 'vendor/**/*'
+    - "bin/**/*"
+    - "config/**/*"
+    - "config.ru"
+    - "db/migrate/*"
+    - "db/schema.rb"
+    - "node_modules/**/*"
+    - "Gemfile"
+    - "Rakefile"
+    - "spec/*_helper.rb"
+    - "vendor/**/*"
 
 Layout/EmptyLineAfterMagicComment:
   Enabled: false
@@ -52,6 +52,12 @@ Style/IfUnlessModifier:
 
 # Default Rails files have comment lines this long
 Metrics/LineLength:
+  Enabled: false
+
+Metrics/MethodLength:
+  Enabled: false
+
+Metrics/AbcSize:
   Enabled: false
 
 # Allow *%i[…]

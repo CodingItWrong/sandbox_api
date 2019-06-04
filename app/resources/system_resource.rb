@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class SystemResource < ApplicationResource
   attributes :name
   has_many :games
