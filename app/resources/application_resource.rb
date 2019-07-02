@@ -23,5 +23,9 @@ class ApplicationResource < JSONAPI::Resource
     def current_user(options)
       options.fetch(:context).fetch(:current_user)
     end
+
+    def default_user
+      User.find_by(email: 'default@example.com')
+    end
   end
 end

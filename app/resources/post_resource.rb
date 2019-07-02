@@ -6,7 +6,7 @@ class PostResource < ApplicationResource
   before_create { _model.user = current_user }
 
   def self.records(options = {})
-    user = current_user(options)
+    user = current_user(options) || default_user
     user.posts
   end
 end
