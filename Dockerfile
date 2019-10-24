@@ -1,10 +1,9 @@
-FROM ruby:2.6.3
+FROM ruby:2.6.5
 
-RUN wget -qO- https://deb.nodesource.com/setup_10.x | bash -
+RUN wget -qO- https://deb.nodesource.com/setup_12.x | bash -
 RUN apt-get update && \
     apt-get install -y nodejs
 RUN gem install bundler
-RUN gem install nokogiri -v 1.10.4
 
 RUN mkdir /myapp
 WORKDIR /myapp
