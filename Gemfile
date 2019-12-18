@@ -3,7 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.5'
 
-gem 'rails', '~> 6.0.1'
+gem 'rails', '6.0.0'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 4.3'
 gem 'sass-rails', '~> 6.0'
@@ -15,6 +15,7 @@ gem 'rack-cors'
 gem 'dotenv-rails'
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
+gem 'sprockets', '~> 3.7.2', '< 4.0'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
