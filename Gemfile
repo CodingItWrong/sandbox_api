@@ -15,7 +15,7 @@ gem 'rack-cors'
 gem 'dotenv-rails'
 gem 'bootstrap', '~> 4.5.0'
 gem 'jquery-rails'
-gem 'sprockets', '~> 3.7.2', '< 4.0'
+gem 'sprockets', '~> 4.0.0'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
