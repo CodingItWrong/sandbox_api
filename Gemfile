@@ -18,7 +18,6 @@ gem 'jquery-rails'
 gem 'sprockets', '~> 3.7.2', '< 4.0'
 
 group :development do
-  gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.3'
   gem 'bullet'
 end
