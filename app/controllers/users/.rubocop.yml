@@ -1,4 +1,10 @@
 inherit_from: ../../../.rubocop.yml
 
+Metrics/AbcSize:
+  Enabled: false # for long DB seeding methods
+
+Metrics/MethodLength:
+  Enabled: false # for long DB seeding methods
+
 Style/ClassAndModuleChildren:
   Enabled: false
