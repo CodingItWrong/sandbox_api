@@ -5,7 +5,7 @@ ruby '2.7.1'
 
 gem 'rails', '6.0.3.2'
 gem 'pg', '>= 0.18', '< 2.0'
-gem 'puma', '~> 4.3.5'
+gem 'puma', '~> 4.3.6'
 gem 'sass-rails', '~> 6.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'devise'
