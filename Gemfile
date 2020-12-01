@@ -13,7 +13,7 @@ gem 'doorkeeper'
 gem 'jsonapi-resources'
 gem 'rack-cors'
 gem 'dotenv-rails'
-gem 'bootstrap', '~> 4.5.2'
+gem 'bootstrap', '~> 4.5.3'
 gem 'jquery-rails'
 gem 'sprockets', '~> 3.7.2', '< 4.0'
 
