@@ -16,6 +16,7 @@ gem 'dotenv-rails'
 gem 'bootstrap', '~> 4.5.3'
 gem 'jquery-rails'
 gem 'sprockets', '~> 3.7.2', '< 4.0'
+gem 'nokogiri', '>= 1.11.0.rc4'
 
 group :development do
   gem 'listen', '>= 3.0.5', '< 3.4'
