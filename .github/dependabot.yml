@@ -13,3 +13,6 @@ updates:
   - dependency-name: nokogiri
     versions:
     - 1.11.2
+  - dependency-name: bootstrap
+    versions:
+    - "> 4"
