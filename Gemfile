@@ -15,7 +15,7 @@ gem 'rack-cors'
 gem 'dotenv-rails'
 gem 'bootstrap', '~> 4.6.0', '< 5'
 gem 'jquery-rails'
-gem 'sprockets', '~> 3.7.2', '< 4.0'
+gem 'sprockets'
 gem 'nokogiri', '>= 1.11.0.rc4'
 
 group :development do
