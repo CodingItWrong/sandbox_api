@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
-class ApiController < JSONAPI::ResourceController
+class ApiController < ActionController::Base
+  include JSONAPI::ActsAsResourceController
+
   skip_before_action :verify_authenticity_token
 
   private
