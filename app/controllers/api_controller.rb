@@ -8,7 +8,7 @@ class ApiController < ActionController::Base
   private
 
   def context
-    { current_user: current_user }
+    {current_user: current_user}
   end
 
   def current_user

@@ -25,7 +25,7 @@ class ApplicationResource < JSONAPI::Resource
     end
 
     def default_user
-      User.find_by(email: 'default@example.com')
+      User.find_by(email: "default@example.com")
     end
   end
 end

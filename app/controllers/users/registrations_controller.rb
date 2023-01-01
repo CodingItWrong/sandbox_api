@@ -64,7 +64,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   private
 
   def created_user
-    User.find_by(email: params['user']['email'])
+    User.find_by(email: params["user"]["email"])
   end
 
   def create_sample_resources
@@ -78,7 +78,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
       Post.create!(
         user: created_user,
         title: "Sample Post #{n}",
-        body: "This is sample post #{n}",
+        body: "This is sample post #{n}"
       )
     end
   end
@@ -86,29 +86,29 @@ class Users::RegistrationsController < Devise::RegistrationsController
   def create_sample_restaurants
     sushi_place =
       created_user.restaurants.create!(
-        name: 'Sushi Place', address: '123 Main Street',
+        name: "Sushi Place", address: "123 Main Street"
       )
     burger_place =
       created_user.restaurants.create!(
-        name: 'Burger Place', address: '456 Other Street',
+        name: "Burger Place", address: "456 Other Street"
       )
 
-    sushi_place.dishes.create!(name: 'Volcano Roll', rating: 3)
-    sushi_place.dishes.create!(name: 'Salmon Nigiri', rating: 4)
+    sushi_place.dishes.create!(name: "Volcano Roll", rating: 3)
+    sushi_place.dishes.create!(name: "Salmon Nigiri", rating: 4)
 
-    burger_place.dishes.create!(name: 'Barbecue Burger', rating: 5)
-    burger_place.dishes.create!(name: 'Slider', rating: 3)
+    burger_place.dishes.create!(name: "Barbecue Burger", rating: 5)
+    burger_place.dishes.create!(name: "Slider", rating: 3)
   end
 
   def create_sample_games
-    ps = created_user.systems.create!(name: 'PlayStation')
-    wii = created_user.systems.create!(name: 'Wii')
-    xb360 = created_user.systems.create!(name: 'Xbox 360')
+    ps = created_user.systems.create!(name: "PlayStation")
+    wii = created_user.systems.create!(name: "Wii")
+    xb360 = created_user.systems.create!(name: "Xbox 360")
 
-    ps.games.create!(title: 'Castlevania: Symphony of the Night', year: 1_997)
-    ps.games.create!(title: 'Final Fantasy 7', year: 1_997)
-    wii.games.create!(title: 'Okami', year: 2_006)
-    xb360.games.create!(title: 'Fallout 3', year: 2_008)
-    xb360.games.create!(title: 'Portal', year: 2_007)
+    ps.games.create!(title: "Castlevania: Symphony of the Night", year: 1_997)
+    ps.games.create!(title: "Final Fantasy 7", year: 1_997)
+    wii.games.create!(title: "Okami", year: 2_006)
+    xb360.games.create!(title: "Fallout 3", year: 2_008)
+    xb360.games.create!(title: "Portal", year: 2_007)
   end
 end
