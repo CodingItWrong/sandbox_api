@@ -16,7 +16,7 @@ gem "dotenv-rails"
 gem "bootstrap", "~> 4.6.0", "< 5"
 gem "jquery-rails"
 gem "sprockets"
-gem "nokogiri", ">= 1.11.0.rc4"
+gem "nokogiri"
 
 group :development do
   gem "listen", ">= 3.0.5", "< 3.8"

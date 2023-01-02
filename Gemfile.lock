@@ -287,7 +287,7 @@ DEPENDENCIES
   jquery-rails
   jsonapi-resources
   listen (>= 3.0.5, < 3.8)
-  nokogiri (>= 1.11.0.rc4)
+  nokogiri
   pg (>= 0.18, < 2.0)
   pry-rails
   puma (~> 6.0.1)
