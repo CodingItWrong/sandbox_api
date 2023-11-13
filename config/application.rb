@@ -30,6 +30,6 @@ module SandboxApi
     # Don't generate system test files.
     config.generators.system_tests = nil
 
-    config.active_record.legacy_connection_handling = false
+    config.active_support.cache_format_version = 7.0
   end
 end
