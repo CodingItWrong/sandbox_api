@@ -19,7 +19,7 @@ gem "sprockets"
 gem "nokogiri"
 
 group :development do
-  gem "listen", ">= 3.0.5", "< 3.9"
+  gem "listen", ">= 3.0.5", "< 3.10"
 end
 
 group :development, :test do
